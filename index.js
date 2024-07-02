@@ -8,7 +8,7 @@ function updateClock()
     const sec = now.getSeconds().toString().padStart(2, 0);
     const aOrP = hours >= 12? "pm" : "am";
 
-    hours = ((hours > 12)? hours % 12 : 12).toString().padStart(2, 0);;
+    hours = (hours % 12 || 12).toString().padStart(2, 0);
 
     const myTime = `${hours} : ${min} : ${sec} ${aOrP}`;
 
